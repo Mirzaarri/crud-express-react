@@ -1,12 +1,16 @@
-import LocalStorage from "./conponents/LocalStorage";
-import User from "./conponents/User";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Profile from './conponents/Profile';
+import User from './conponents/User';
 
 function App() {
   return (
-   <div className="bg-teal-100">
-   <User/>
-   {/* <LocalStorage/> */}
-   </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<User />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
+    </Router>
   );
 }
 
